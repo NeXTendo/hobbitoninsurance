@@ -2,18 +2,20 @@
 
 import { useEffect, useRef } from 'react'
 import { useState } from 'react'
-import Image from 'next/image'
+import { useParallax } from '@/hooks/useParallax'
+import { ShieldCheckIcon, BoltIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
+import { Link } from 'lucide-react'
+import gsap from 'gsap'
 import { Carousel, Rate, Collapse, Progress, Button, Card } from 'antd'
 import { CarOutlined, CheckCircleOutlined, FireOutlined, LeftOutlined, RightOutlined, SafetyCertificateOutlined, TeamOutlined } from '@ant-design/icons'
 import { AnimatePresence, motion, useScroll,useTransform } from 'framer-motion'
 import ReadMoreModals from '@/components/UI/ReadMoreModals'
 import QuoteModal from '@/components/Form/QuoteForm'
-import { useParallax } from '@/hooks/useParallax'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-import { ShieldCheckIcon, BoltIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
-import { Link } from 'lucide-react'
 import ParallaxBackground from '@/components/ParallaxBackground'
+import Image from 'next/image'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -25,8 +27,8 @@ const countersData = [
 const step1Icons = {
   'Private Vehicle': <CarOutlined style={{ fontSize: 48, color: '#4ade80' }} />,
   'Business Fleet': <TeamOutlined style={{ fontSize: 48, color: '#60a5fa' }} />,
-  Motorbike: <CarOutlined style={{ fontSize: 48, color: '#fbbf24' }} />, // can replace with motorbike icon
-  Taxi: <CarOutlined style={{ fontSize: 48, color: '#f87171' }} />, // placeholder
+  Motorbike: <CarOutlined style={{ fontSize: 48, color: '#fbbf24' }} />,
+  Taxi: <CarOutlined style={{ fontSize: 48, color: '#f87171' }} />,
 }
 
 const step2Icons = {
@@ -164,7 +166,7 @@ const milestones = [
     { title: 'Innovation', text: 'We’re building the future of African insurance.' },
   ]
 
-  // handle answers and move to next step
+  // handle answers
   const handleAnswer = (key: string, value: string) => {
     const updated = { ...answers, [key]: value }
     setAnswers(updated)
@@ -192,6 +194,7 @@ const milestones = [
        <ParallaxBackground />
     </div>
 <section className="relative z-10">
+
    {/* Hero Section */}
   <section className="relative z-10 py-28 px-4 md:px-10 lg:px-20 text-white">
     <div className="absolute inset-0 -z-10">
@@ -231,10 +234,10 @@ const milestones = [
   </section>
 {/* About Hobbiton */}
    <div className="text-white font-sans">
-      {/* 🧭 Hero About Section */}
+      {/* Hero Section */}
       <section className="relative py-32 px-6 md:px-16 lg:px-32 bg-[#101010] text-white overflow-hidden">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          {/* Left Image */}
+          {/* Hero Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -255,7 +258,7 @@ const milestones = [
             </div>
           </motion.div>
 
-          {/* Right Text */}
+          {/* Hero Text */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -277,7 +280,7 @@ const milestones = [
         </div>
       </section>
 
-      {/* 📈 Timeline Section */}
+      {/* Timeline Section */}
       <section className="bg-[#0f0f0f] py-24 px-6 md:px-16 lg:px-32 text-white">
         <h3 className="text-3xl font-bold text-center mb-12">From Then to Now</h3>
         <div className="grid md:grid-cols-4 gap-8 max-w-7xl mx-auto">
@@ -296,7 +299,7 @@ const milestones = [
         </div>
       </section>
 
-      {/* 🌟 Core Values Section */}
+      {/* Core Values Section */}
       <section className="py-24 px-6 md:px-16 lg:px-32 bg-gradient-to-r from-[#0e1a1a] to-[#1c1c1c] text-white">
         <h3 className="text-3xl font-bold text-center mb-12">What Drives Us</h3>
         <div className="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
@@ -537,23 +540,23 @@ const milestones = [
       </div>
     </section>
 
-     <div className="relative overflow-hidden min-h-screen pb-60"> {/* 📌 Added pb-60 to fix background overflow */}
+     <div className="relative overflow-hidden min-h-screen pb-60">
 
-      {/* 🌈 Animated Background */}
+{/* Animated Background */}
+  <motion.div
+      className="absolute top-0 left-0 w-full h-[110%] bg-hobbiton-animated bg-[length:400%_400%] animate-gradient-x -z-10"
+      style={{ y }}
+    />
+
+  <div className="relative z-10 flex flex-col space-y-32 py-32">
+
+{/* CTA Section */}
+   <section className="px-4 md:px-10 lg:px-20">
       <motion.div
-        className="absolute top-0 left-0 w-full h-[110%] bg-hobbiton-animated bg-[length:400%_400%] animate-gradient-x -z-10"
-        style={{ y }}
-      />
-
-      <div className="relative z-10 flex flex-col space-y-32 py-32">
-
-        {/* ✅ CTA Section */}
-        <section className="px-4 md:px-10 lg:px-20">
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-            transition={{ duration: 0.6 }}
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.6 }}
             className="bg-white/10 backdrop-blur-lg border border-white/10 shadow-2xl px-6 md:px-16 lg:px-32 py-20 text-center w-full"
           >
             <h2 className="text-3xl font-bold mb-4 text-white">Ready to Protect Your Vehicle?</h2>
@@ -569,7 +572,7 @@ const milestones = [
           </motion.div>
         </section>
 
-        {/* 🧑‍🤝‍🧑 Testimonials */}
+        {/* Testimonials */}
         <section className="px-4 md:px-10 lg:px-20 text-center">
           <motion.h2
             initial={{ opacity: 0, y: -50 }}
@@ -645,7 +648,7 @@ const milestones = [
           </div>
         </section>
 
-        {/* 🔢 By The Numbers */}
+        {/* By The Numbers */}
         <section className="px-4 md:px-10 lg:px-20 text-center">
           <motion.h2
             initial={{ opacity: 0, y: -40 }}
@@ -683,7 +686,7 @@ const milestones = [
           </div>
         </section>
 
-        {/* 💸 Pricing */}
+        {/* Pricing */}
         <section className="px-4 md:px-10 lg:px-20 text-center">
           <motion.h2
             initial={{ opacity: 0, y: -40 }}
