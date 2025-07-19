@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Ant Datepicker styles */
+@import 'react-datepicker/dist/react-datepicker.css';
+
+/* Base reset + font */
+@layer base {
+  html {
+    font-family: 'Times New Roman', serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+}
+
+/* Carousel dot style */
+.slick-dots li button:before {
+  color: #0F5B2B;
+  opacity: 0.75;
+}
+.slick-dots li.slick-active button:before {
+  color: #f4a261;
+  opacity: 1;
+}
+.custom-dots {
+  @apply bottom-[-30px] px-2 z-10;
+}
+.custom-dots li button {
+  background: black !important;
+}
+
+/* Animations */
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.animate-gradient-x {
+  animation: gradient-x 15s ease infinite;
+}
+/* Ant Design modal override with Tailwind (Glassmorphism) */
+.custom-quote-modal .ant-modal-content {
+  @apply rounded-xl p-4 sm:p-6 text-white;
+  background: rgba(28, 28, 28, 0.8);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
