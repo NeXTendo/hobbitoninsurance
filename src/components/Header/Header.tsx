@@ -113,7 +113,7 @@ export default function Header({ onLoginClick }: HeaderProps) {
           placement="right"
           onClose={() => setOpen(false)}
           open={open}
-          width="85vw" // 85vw for better compatibility; use 33vw if preferred
+          width="85vw"
           className="md:hidden"
         >
           <Menu mode="vertical" selectable={false}>
