@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -15,8 +14,8 @@ const config: Config = {
         serif: ['"Times New Roman"', 'serif'],
       },
       colors: {
-        primary: '#006c67', // Hobbiton green
-        accent: '#f4a261', // Soft orange
+        primary: '#006c67', 
+        accent: '#f4a261',
         light: '#f1f5f9',
         dark: '#1f2937',
       },

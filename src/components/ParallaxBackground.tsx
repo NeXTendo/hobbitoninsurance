@@ -11,7 +11,7 @@ export default function ParallaxBackground() {
   const [disableParallax, setDisableParallax] = useState(false)
   const scrollTriggerInstance = useRef<ScrollTrigger | null>(null)
 
-  // 1. Device capability check
+  // Device capability check
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const isLowMemory = 'deviceMemory' in navigator && (navigator as any).deviceMemory <= 2
@@ -23,7 +23,7 @@ export default function ParallaxBackground() {
     }
   }, [])
 
-  // 2. Setup GSAP scroll trigger animation
+  // Scroll trigger animation
   useEffect(() => {
     if (disableParallax || !bgRef.current) return
 
@@ -41,7 +41,7 @@ export default function ParallaxBackground() {
 scrollTriggerInstance.current = animation.scrollTrigger ?? null
 
     return () => {
-      // Properly kill scrollTrigger instance on unmount
+      // Kill scrollTrigger instance
       scrollTriggerInstance.current?.kill()
       scrollTriggerInstance.current = null
     }

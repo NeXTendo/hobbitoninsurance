@@ -34,7 +34,7 @@ export default function ReadMoreModal({
   const content = contentList[contentIndex]
   const dialogRef = useRef<HTMLDivElement>(null)
 
-  // ⌨️ Keyboard navigation
+  //Keyboard navigation
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') {
@@ -87,7 +87,7 @@ export default function ReadMoreModal({
               aria-modal="true"
               aria-labelledby="modal-title"
             >
-              {/* ❌ Close Button */}
+              {/* Close Button */}
               <button
                 onClick={onClose}
                 className="absolute top-3 right-3 text-gray-600 hover:text-red-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500"
@@ -96,7 +96,7 @@ export default function ReadMoreModal({
                 <XMarkIcon className="w-6 h-6" />
               </button>
 
-              {/* 🖼 Image using Next.js Image */}
+              {/* Image using Next.js Image */}
               <div className="w-full h-48 relative rounded-xl overflow-hidden">
                 <Image
                   src={content.image}
@@ -106,13 +106,13 @@ export default function ReadMoreModal({
                 />
               </div>
 
-              {/* 📝 Text Content */}
+              {/* Text Content */}
               <h2 id="modal-title" className="text-2xl font-semibold">
                 {content.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">{content.text}</p>
 
-              {/* ⬅️➡️ Navigation */}
+              {/* Navigation */}
               <div className="flex justify-between pt-4">
                 <button
                   onClick={() =>

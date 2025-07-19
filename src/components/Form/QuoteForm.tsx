@@ -31,7 +31,7 @@ export default function QuoteModal({ isOpen, onClose }: Props) {
   const [loading, setLoading] = useState(false)
   const [submitted, setSubmitted] = useState(false)
 
-  // Prevent background scroll when modal is open
+  // Prevent background scroll
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
