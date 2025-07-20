@@ -1,17 +1,15 @@
 'use client'
 
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect } from 'react'
 import { useScroll, useTransform, useMotionValue } from 'framer-motion'
 
 export function useParallax(speed = 0.2) {
   const ref = useRef<HTMLElement | null>(null)
 
-  // Create motion value manually
   const scrollY = useMotionValue(0)
 
   const y = useTransform(scrollY, [0, 300], [0, -speed * 300])
 
-  // Attach scroll listener *after* ref is hydrated
   useEffect(() => {
     if (!ref.current) return
 

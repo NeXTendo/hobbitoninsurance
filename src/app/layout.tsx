@@ -5,13 +5,19 @@ import Footer from '@/components/Footer/Footer'
 import 'antd/dist/reset.css'
 
 export const metadata = {
-  title: 'Motor Insurance | Hobbiton Technologies',
+  title: 'Hobbiton Insurance',
   description: 'Get a quick motor insurance quote online',
+  icons: {
+    icon: '/hobbiton2.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/hobbiton2.png" type="image/png" />
+      </head>
       <body className="bg-light text-dark font-sans antialiased">
         <Header />
         <main className="min-h-[80vh]">{children}</main>
@@ -19,4 +25,4 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </body>
     </html>
   )
-}
+} 

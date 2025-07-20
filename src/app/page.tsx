@@ -4,7 +4,6 @@ import { useEffect, useRef } from 'react'
 import { useState } from 'react'
 import { useParallax } from '@/hooks/useParallax'
 import { ShieldCheckIcon, BoltIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
-import { Link } from 'lucide-react'
 import gsap from 'gsap'
 import { Carousel, Rate, Collapse, Progress, Button, Card } from 'antd'
 import { CarOutlined, CheckCircleOutlined, FireOutlined, LeftOutlined, RightOutlined, SafetyCertificateOutlined, TeamOutlined } from '@ant-design/icons'
@@ -186,8 +185,6 @@ const milestones = [
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
   }
-
-
   return (
 <main className="relative">
     <div className="absolute inset-0 -z-10">
@@ -232,6 +229,7 @@ const milestones = [
       </div>
     </motion.div>
   </section>
+
 {/* About Hobbiton */}
    <div className="text-white font-sans">
       {/* Hero Section */}
@@ -254,7 +252,7 @@ const milestones = [
               />
             </div>
             <div className="absolute bottom-6 left-6 bg-primary text-white text-sm px-4 py-2 rounded-xl shadow-lg">
-              🚗 15,000+ Drivers Protected
+              15,000+ Drivers Protected
             </div>
           </motion.div>
 
@@ -348,7 +346,7 @@ const milestones = [
               {type.description}
             </p>
             <p className="text-black text-center text-sm mt-4 font-semibold cursor-pointer select-none transition-colors group-hover:text-accent/80">
-              Read more
+              Read More
             </p>
           </motion.div>
         </div>
@@ -370,14 +368,14 @@ const milestones = [
         </h3>
         <p className="text-black/80 text-sm flex-grow">{type.description}</p>
         <p className="text-black text-center text-sm mt-4 font-semibold cursor-pointer select-none transition-colors group-hover:text-accent/80">
-          Read more
+          Read More
         </p>
       </motion.div>
     ))}
   </div>
 </section>
 
-    {/* Read More Modals */}
+    {/*Find the right insurance */}
     <section className="px-4 md:px-10 lg:px-20 py-20 bg-[#0f1a1a] text-white">
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
@@ -508,7 +506,7 @@ const milestones = [
     <div className="flex justify-center items-center gap-3 mt-2">
       <Rate disabled defaultValue={5} style={{ color: '#f4a261', fontSize: '1.5rem' }} />
       <span className="bg-white text-primary text-sm font-medium px-3 py-1 rounded-md shadow">
-        4.9/5 from 1,200+ users
+        4.9/5 from 1,200+ Users
       </span>
     </div>
   </div>
