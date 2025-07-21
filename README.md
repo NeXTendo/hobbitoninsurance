@@ -8,19 +8,17 @@ Requirements:
 
 Before starting, make sure you have:
 
-	•	Node.js v18+ installed – Download Node.js
+	Node.js v18+ installed – Download Node.js
 
-	•	npm or yarn
-
-⸻
+	npm or yarn
 
 Setup Instructions:
 
 1. Clone the repository
 
-git clone https://github.com/NeXTendo/hobbitoninsurance.git
+		git clone https://github.com/NeXTendo/hobbitoninsurance.git
 
-cd hobbiton-insurance
+		cd hobbiton-insurance
 
 2. Install dependencies
 
@@ -32,15 +30,15 @@ cd hobbiton-insurance
 
 		yarn install
 
-⸻
-
 3. Start the development server:
 
 		npm run dev
 
 By default it will be available at:
-http://localhost:3000
-and the displayed Local IP Address to access on your mobile device
+
+	http://localhost:3000
+
+	or the Local IP Address for mobile access.
 
 ⸻
 
