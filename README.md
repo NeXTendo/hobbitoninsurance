@@ -1,15 +1,72 @@
 ## Getting Started
 
-First, run the development server:
+⸻
 
-```bash
+Hobbiton Insurance Project – Setup & Run Guide
+
+A modern insurance quote platform using Next.js, Tailwind CSS, Ant Design, Framer Motion, and GSAP.
+
+⸻
+
+Requirements
+
+Before starting, make sure you have:
+	•	Node.js v18+ installed – Download Node.js
+	•	npm or yarn
+
+⸻
+
+Setup Instructions
+
+1. Clone the repository
+
+git clone https://github.com/NeXTendo/hobbitoninsurance.git
+cd hobbiton-insurance
+
+2. Install dependencies
+
+Using npm:
+
+npm install
+
+Or using yarn:
+
+yarn install
+
+
+⸻
+
+3. Start the development server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result, use the displays ADDRESS below local host to view on your mobile devices/tablets
+By default it will be available at:
+http://localhost:3000
+and the displayed Local IP Address to access on your mobile device
+
+⸻
+
+Project Structure
+
+hobbiton-insurance/
+├── public/               # Static assets (images, favicon, etc.)
+├── src/
+│   ├── components/       # Reusable components (e.g., QuoteWizard, Header)
+│   ├── hooks/            # Custom hooks (e.g., useParallax)
+│   ├── pages/            # Next.js pages (index.tsx, about.tsx, etc.)
+│   ├── styles/           # Tailwind CSS and global styles
+│   └── lib/              # Utility functions
+├── tailwind.config.js    # Tailwind config
+├── next.config.js        # Next.js config
+├── package.json
+└── README.md
+
+⸻
+
+Tech Stack
+	•	Next.js – React framework for SSR/SSG
+	•	Tailwind CSS – Utility-first styling
+	•	Ant Design – UI components
+	•	Framer Motion – Animations and transitions
+	•	GSAP + ScrollTrigger – Advanced scroll animations
+	•	TypeScript – For type safety
