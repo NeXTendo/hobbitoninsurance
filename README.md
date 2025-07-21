@@ -11,7 +11,9 @@ A modern insurance quote platform using Next.js, Tailwind CSS, Ant Design, Frame
 Requirements
 
 Before starting, make sure you have:
+
 	•	Node.js v18+ installed – Download Node.js
+
 	•	npm or yarn
 
 ⸻
@@ -43,23 +45,6 @@ npm run dev
 By default it will be available at:
 http://localhost:3000
 and the displayed Local IP Address to access on your mobile device
-
-⸻
-
-Project Structure
-
-hobbiton-insurance/
-├── public/               # Static assets (images, favicon, etc.)
-├── src/
-│   ├── components/       # Reusable components (e.g., QuoteWizard, Header)
-│   ├── hooks/            # Custom hooks (e.g., useParallax)
-│   ├── pages/            # Next.js pages (index.tsx, about.tsx, etc.)
-│   ├── styles/           # Tailwind CSS and global styles
-│   └── lib/              # Utility functions
-├── tailwind.config.js    # Tailwind config
-├── next.config.js        # Next.js config
-├── package.json
-└── README.md
 
 ⸻
 
